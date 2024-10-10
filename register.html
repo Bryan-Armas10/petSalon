@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/mystyles.css">
     <title>Document</title>
 </head>
 <body>
+    <header class="site-init">
+        <div class="nav-bar">
+            <h1>The Fashion pet</h1>
+            <nav>   
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>PETS</h1>
     
-    <button onclick="displayNames()"> Display Names</button>
-    <div id="petnames">
-
-    </div>
-
-    <script src="./scripts/register.js"></script>
-</body>
+        <button onclick="displayNames(); displayCount()"> Display Names</button>
+        <div id="petCount">
+    
+        </div>
+        <div id="petnames"> 
+    
+        </div>
+    
+        <script src="./scripts/register.js"></script>
+    </main>   
+</body> 
 </html>

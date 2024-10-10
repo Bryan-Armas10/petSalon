@@ -28,16 +28,22 @@ pets.push(pet1);
 pets.push(pet2);
 pets.push(pet3);
 
+function displayCount() {
+    // display pets
+    let count = pets.length;
+    document.getElementById("petCount").innerHTML = `<h2>Total pets: ${count}</h2>`;
+}
 function displayNames(){
     // display pet names
-    console.log(pets[0].name);
-    console.log(pets[1].name);
-    console.log(pets[2].name);
-    /// console.log(pets[1].name);
+    for(let i = 0; i < pets.length; i++){
+        document.getElementById("petnames").innerHTML +=`
+        <div>
+            <h3>pet ${[i + 1]}: ${pets[i].name}</h3>
+        </div>
+    `;
+    }
 
 // hint: use a for loop and travel the array
 // hint: use brute force\
 // hint: length the ampunt of elements on the array
 }
-
-displayNames();
