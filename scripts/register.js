@@ -23,18 +23,18 @@ let pet3 = {
     service:"shower",
     breed:"chihuahua"
 }
-
+// Push the pets
 pets.push(pet1);
 pets.push(pet2);
 pets.push(pet3);
 
+// Function displayCount is for total pets register
 function displayCount() {
-    // display pets
     let count = pets.length;
     document.getElementById("petCount").innerHTML = `<h2>Total pets: ${count}</h2>`;
 }
+// Function displayNames is for names the all pets
 function displayNames(){
-    // display pet names
     for(let i = 0; i < pets.length; i++){
         document.getElementById("petnames").innerHTML +=`
         <div>
