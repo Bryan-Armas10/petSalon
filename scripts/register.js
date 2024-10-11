@@ -6,27 +6,25 @@ let pet1 = {
     name:"Scooby",
     age:99,
     gender:"Male",
-    service:"shower",
+    service:"Grooming",
     breed:"boxer"
 }
 let pet2 = {
-    name:"Snoopy",
+    name:"Snoopy",  
     age:10,
     gender:"Male",
-    service:"shower",
+    service:"Grooming",
     breed:"Dalmatian"
-}
+}   
 let pet3 = {
     name:"Marley",
     age:20,
     gender:"Female",
-    service:"shower",
+    service:"Grooming",
     breed:"chihuahua"
 }
 // Push the pets
-pets.push(pet1);
-pets.push(pet2);
-pets.push(pet3);
+pets.push(pet1,pet2,pet3);
 
 // Function displayCount is for total pets register
 function displayCount() {
@@ -36,14 +34,7 @@ function displayCount() {
 // Function displayNames is for names the all pets
 function displayNames(){
     for(let i = 0; i < pets.length; i++){
-        document.getElementById("petnames").innerHTML +=`
-        <div>
-            <h3>pet ${[i + 1]}: ${pets[i].name}</h3>
-        </div>
-    `;
+        document.getElementById("petnames").innerHTML +=`<p>name: ${pets[i].name}</p>`;
     }
-
-// hint: use a for loop and travel the array
-// hint: use brute force\
-// hint: length the ampunt of elements on the array
+    console.log(pets.length);
 }
