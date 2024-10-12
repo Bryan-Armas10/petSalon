@@ -7,27 +7,55 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="site-init">
-        <div class="nav-bar">
+    <header>
+        <div class="site-init">
             <h1>The Fashion pet</h1>
-            <nav>   
+            <nav class="nav-bar">   
                 <a href="index.html">Home</a>
                 <a href="register.html">Register</a>
             </nav>
         </div>
     </header>
     <main>
-        <h1>PETS</h1>
-        <!-- Button for display the pets names register -->
-        <button onclick="displayNames(); displayCount()"> Display Names</button>
-        <div id="petCount">
-    
+        <div class="form-container">
+            <h1>Register</h1>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="txtName">Name:</label>
+                    <input type="text" id="txtName" required>
+                </div>
+                <div class="form-group">
+                    <label for="txtAge">Age:</label>
+                    <input type="number" id="txtAge" required>
+                </div>
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="gender-options">
+                        <input type="radio" id="genderMale" name="gender" value="Male">
+                        <label for="genderMale">Male</label>
+                        <input type="radio" id="genderFemale" name="gender" value="Female">
+                        <label for="genderFemale">Female</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtBreed">Breed:</label>
+                    <input type="text" id="txtBreed" required>
+                </div>
+                <div class="form-group">
+                    <label for="txtService">Services:</label>
+                    <select id="txtService" required>
+                        <option value="" disabled selected>-- Select an option --</option>
+                        <option value="grooming">Grooming</option>
+                        <option value="nails">Nails</option>
+                        <option value="vaccines">Vaccines</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="button" onclick="register()">Register</button>
+                </div>
+            </form>
         </div>
-        <div id="petnames"> 
-    
-        </div>
-    
-        <script src="./scripts/register.js"></script>
     </main>   
+    <script src="./scripts/register.js"></script>
 </body> 
 </html>
