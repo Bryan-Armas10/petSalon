@@ -58,3 +58,16 @@ button {
     justify-content: space-around;
     align-items: center;
 }
+
+
+#pets{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.pet{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+}
