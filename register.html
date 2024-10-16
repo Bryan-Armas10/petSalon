@@ -30,6 +30,12 @@
                     <label for="txtAge">Age:</label>
                     <input type="number" id="txtAge" required>
                 </div>
+
+                <div class="form-group">
+                    <label for="txtGender">Gender:</label>
+                    <input type="text" id="txtGender" required>
+                </div>
+                <!--
                 <div class="form-group">
                     <label>Gender:</label>
                     <div class="gender-options">
@@ -39,6 +45,8 @@
                         <label for="genderFemale">Female</label>
                     </div>
                 </div>
+                -->
+
                 <div class="form-group">
                     <label for="txtBreed">Breed:</label>
                     <input type="text" id="txtBreed" required>
@@ -67,13 +75,20 @@
             <div id="pets">
                  all the pets are going to be displayed here!!!
             </div>
+            
+            id="pets" class="table table-bordered border-primary table-info"
             -->
-            <table id="pets" class="table table-bordered border-primary table-info">
+            <table class="table">
                 <thead>
-                    
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Breed</th>
+                        <th>Service</th>
+                        <th>Action</th>
                 </thead>
                 
-                <tbody>                    
+                <tbody id="petTable">                    
                     <!-- here the rows are displayed-->
                 </tbody>
 

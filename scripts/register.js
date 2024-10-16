@@ -1,6 +1,13 @@
 console.log("register.js");
 let pets = []; // empty array
 
+let inputName = document.getElementById("txtName");
+let inputAge = document.getElementById("txtAge");
+let inputGender = document.getElementById("txtGender").value;
+//let inputGender = document.querySelector('input[name="gender"]:checked') || '';  
+let inputBreed = document.getElementById("txtBreed");
+let inputService = document.getElementById("txtService");
+
 function Pet(name,age,gender,breed,service){
     // properties = parameter (value) 
     this.name=name;
@@ -10,21 +17,51 @@ function Pet(name,age,gender,breed,service){
     this.service=service;
 }
 
-function register(){
-    let inputName = document.getElementById("txtName").value;
-    let inputAge = document.getElementById("txtAge").value;
-    // let inputGender = document.getElementById("txtGender").value;
-    let inputGender = document.querySelector('input[name="gender"]:checked')?.value || '';  
-    let inputBreed = document.getElementById("txtBreed").value;
-    let inputService = document.getElementById("txtService").value;
+function isValid(){
+    let validation = true;
 
-    console.log(inputName,inputAge,inputGender,inputBreed,inputService);
+    if(pet.name==""){
+        validation = false;
+        inputName.classList.add("Error");
+    }
+    if(pet.age==""){
+        validation = false;
+        inputService.classList.add("Error");
+    }
+    if(pet.gender==""){
+        validation = false;
+        inputService.classList.add("Error");
+    }
+    if(pet.breed==""){
+        validation = false;
+        inputService.classList.add("Error");
+    }
+    if(pet.service==""){
+        validation = false;
+        inputService.classList.add("Error");
+    }
+    return validation;
+}
+
+function register(){
     // Create de object
-    let newPet = new Pet(inputName,inputAge,inputGender,inputBreed,inputService);
+    let newPet = new Pet(inputName.value,inputAge.value,inputGender.value,inputBreed.value,inputService.value);
     console.log(newPet);
-    pets.push(newPet);
-    displayTotals();
+    if(isValid(newPet)==true){
+        pets.push(newPet);
+        displayTotals();
+        displayTable();
+    }else {
+        alert("Complete all the information.");
+    }
+}
+
+function deletePet(petId){
+    console.log("Deleting pet ..." + petId);
+    document.getElementById(petId).remove();    
+    pets.splice(petId,1);
     displayTable();
+    displayTotals();
 }
 
 function init(){

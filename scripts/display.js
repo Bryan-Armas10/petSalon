@@ -20,32 +20,24 @@ function displayTotals(){
 }       
 
 function displayTable(){
-    let table =
-    `
-    <tr>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Gender</th>
-        <th>Breed</th>
-        <th>Service</th>
-    </tr>
-    `;
+    let row ="";
     for(let i=0;i<pets.length;i++){
         let pet = pets[i];// Getting the current
-        table+=`
-        <tr>
+        row +=`<tr 
+        id="${i}">
         <td>${pet.name}</td>
         <td>${pet.age}</td>
         <td>${pet.gender}</td>
         <td>${pet.breed}</td>
-        <td>${pet.service}</td> 
-        </tr>   
-        `
-        ;
-        console.log(table);
+        <td>${pet.service}</td>
+        <td><button class="btn btn-danger" onclick="deletePet(${i})">Delete </button></td>
+        </tr>`
+        console.log(row);
      // instead of card use row
      //row +=`<tr></tr>`
      // read about HTML tables
     }
-    document.getElementById("pets").innerHTML=table;// insert the cart into HTML
+    document.getElementById("petTable").innerHTML=row;// insert the cart into HTML
 }
+
+// Create the deletePet function under the registe.js annd display on the console "Deleting pet ..." 
