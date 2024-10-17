@@ -3,10 +3,9 @@ let pets = []; // empty array
 
 let inputName = document.getElementById("txtName");
 let inputAge = document.getElementById("txtAge");
-let inputGender = document.getElementById("txtGender").value;
-//let inputGender = document.querySelector('input[name="gender"]:checked') || '';  
+let inputGender = document.getElementById("txtGender");
 let inputBreed = document.getElementById("txtBreed");
-let inputService = document.getElementById("txtService");
+let inputService = document.getElementById("txtService");   
 
 function Pet(name,age,gender,breed,service){
     // properties = parameter (value) 
@@ -17,28 +16,27 @@ function Pet(name,age,gender,breed,service){
     this.service=service;
 }
 
-function isValid(){
-    let validation = true;
-
+function isValid(pet){      
+    let validation = true;  
     if(pet.name==""){
-        validation = false;
-        inputName.classList.add("Error");
+        validation = false;             
+        inputName.classList.add("error");
     }
     if(pet.age==""){
         validation = false;
-        inputService.classList.add("Error");
+        inputService.classList.add("error");
     }
     if(pet.gender==""){
         validation = false;
-        inputService.classList.add("Error");
+        inputService.classList.add("error");
     }
     if(pet.breed==""){
         validation = false;
-        inputService.classList.add("Error");
+        inputService.classList.add("error");
     }
     if(pet.service==""){
         validation = false;
-        inputService.classList.add("Error");
+        inputService.classList.add("error");
     }
     return validation;
 }

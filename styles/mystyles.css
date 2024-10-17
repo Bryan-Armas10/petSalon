@@ -2,7 +2,10 @@ body{
     padding: 20px;
     margin:20px;
     font-family: arial;
-    background-color: darksalmon;
+    background-color: #a7dbd8;
+}
+main{
+    background-color: #a7dbd8;
 }
 
 img{
@@ -11,7 +14,7 @@ img{
 
 /*header*/
 .site-init{
-    background-color: #ffcc00;
+    background-color: #e0e4cc;
 } 
 
 .nav-bar{
@@ -34,6 +37,14 @@ button {
     border: none;
 }
 
+a{
+    margin: 1px auto;
+    padding: 5px 5px;
+    font-size: 25px;
+    background-color: #f38630;
+    border: none;
+}
+
 .form-container {
     max-width: 400px;
     margin: 20px auto;
@@ -52,14 +63,6 @@ button {
     margin-bottom: 5px;
 }
 
-
-.gender-options {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
 #pets{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -70,4 +73,18 @@ button {
     border: 1px solid black;
     border-radius: 20px;
     padding: 20px;
+}
+
+.grooming{
+    background-color: rgb(168, 205, 243);
+}
+.vaccines{
+    background-color: rgb(197, 244, 175);
+}
+.nails{
+    background-color: rgb(245, 217, 245);
+}
+
+.error{
+    background-color: red;
 }
