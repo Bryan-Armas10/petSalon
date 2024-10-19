@@ -19,26 +19,84 @@ function Pet(name,age,gender,breed,service){
 function isValid(pet){      
     let validation = true;  
     if(pet.name==""){
-        validation = false;             
-        inputName.classList.add("error");
+        validation = false;   
+        $("#txtName").addClass("error");          
+        //inputName.classList.addClass("error");
+        $(".nameValidationMsg").css("color","red").show();
+    }else{
+        $("#txtName").removeClass("error");
+        //inputName.classList.removeClass("error");
+        $(".nameValidationMsg").hide();
+        validation=true;
     }
+
     if(pet.age==""){
         validation = false;
-        inputService.classList.add("error");
+        $("#txtAge").addClass("error");
+        //inputService.classList.add("error");
+        $(".ageValidationMsg").css("color","red").show();
+    }else{
+        $("#txtAge").removeClass("error");
+        //inputAge.classList.removeClass("error");
+        $(".ageValidationMsg").hide();
+        validation=true;
     }
+
     if(pet.gender==""){
         validation = false;
-        inputService.classList.add("error");
+        $("#txtGender").addClass("error");
+        //inputService.classList.add("error");
+        $(".genderValidationMsg").css("color","red").show();
+    }else{
+        $("#txtGender").removeClass("error");
+        //inputGender.classList.removeClass("error");
+        $(".genderValidationMsg").hide();
+        validation=true;
     }
+
     if(pet.breed==""){
         validation = false;
-        inputService.classList.add("error");
+        $("#txtBreed").addClass("error");
+        //inputService.classList.add("error");
+        $(".breedValidationMsg").css("color","red").show();
+    }else{
+        $("#txtBreed").removeClass("error");
+        //inputBreed.classList.removeClass("error");
+        $(".breedValidationMsg").hide();
+        validation=true;
     }
+
     if(pet.service==""){
         validation = false;
-        inputService.classList.add("error");
+        $("#txtService").addClass("error");
+        //inputService.classList.add("error");
+        $(".serviceValidationMsg").css("color","red").show();
+    }else{
+        $("#txtService").removeClass("error");
+        //inputService.classList.removeClass("error");
+        $(".serviceValidationMsg").hide();
+        validation=true;
     }
+
     return validation;
+}
+
+function clearForm() {
+    $("#txtName").val('');
+    $("#txtAge").val('');
+    $("#txtGender").val('');
+    $("#txtBreed").val('');
+    $("#txtService").val('');
+    $(".nameValidationMsg").hide();
+    $(".ageValidationMsg").hide();
+    $(".genderValidationMsg").hide();
+    $(".breedValidationMsg").hide();
+    $(".serviceValidationMsg").hide();
+    $("#txtName").removeClass("error");
+    $("#txtAge").removeClass("error");
+    $("#txtGender").removeClass("error");
+    $("#txtBreed").removeClass("error");
+    $("#txtService").removeClass("error");
 }
 
 function register(){
@@ -49,6 +107,7 @@ function register(){
         pets.push(newPet);
         displayTotals();
         displayTable();
+        clearForm();
     }else {
         alert("Complete all the information.");
     }
@@ -63,6 +122,20 @@ function deletePet(petId){
 }
 
 function init(){
+    $(".nameValidationMsg").hide();
+    $(".ageValidationMsg").hide();
+    $(".genderValidationMsg").hide();
+    $(".breedValidationMsg").hide();
+    $(".serviceValidationMsg").hide();
+    // hook events
+    $().click(register);
+    $("#txtService").on("keypress", function(event) {
+
+        if (event.which == 13) {
+            register();
+        }
+   });
+
     console.log("init");
     let pet1 = new Pet("Scooby",99,"Male","Dalma","Grooming");
     // create 2 more pets

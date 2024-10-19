@@ -14,6 +14,7 @@
             <nav>   
                 <a href="index.html">Home</a>   
                 <a href="register.html">Register</a>
+                <a href="services.html">Service</a>
             </nav>
         </div>
     </header>
@@ -23,32 +24,37 @@
             <form id="registerForm">
                 <div class="form-group">
                     <label for="txtName">Name:</label>
-                    <input type="text" id="txtName" required>
+                    <input type="text" id="txtName">
+                    <small class="nameValidationMsg">This is a required field</small>
                 </div>
                 <div class="form-group">
                     <label for="txtAge">Age:</label>
-                    <input type="number" id="txtAge" required>
+                    <input type="number" id="txtAge">
+                    <small class="ageValidationMsg">This is a required field</small>
                 </div>
 
                 <div class="form-group">
                     <label for="txtGender">Gender:</label>
-                    <input type="text" id="txtGender" required>
+                    <input type="text" id="txtGender">
+                    <small class="genderValidationMsg">This is a required field</small>
                 </div>
                 <div class="form-group">
                     <label for="txtBreed">Breed:</label>
-                    <input type="text" id="txtBreed" required>
+                    <input type="text" id="txtBreed">
+                    <small class="breedValidationMsg">This is a required field</small>
                 </div>
                 <div class="form-group">
                     <label for="txtService">Services:</label>
-                    <select id="txtService" required>
+                    <select id="txtService">
                         <option value="" disabled selected>-- Select an option --</option>
                         <option value="grooming">Grooming</option>
                         <option value="nails">Nails</option>
                         <option value="vaccines">Vaccines</option>
                     </select>
+                    <small class="serviceValidationMsg">This is a required field</small>
                 </div>
                 <div class="form-group">
-                    <button type="button" onclick="register()">Register</button>
+                    <button id="btnRegister" type="button" onclick="register()">Register</button>
                 </div>
             </form>
         </div>
@@ -85,5 +91,6 @@
     </main>   
     <script src="./scripts/register.js"></script>
     <script src="./scripts/display.js"></script>
+    <script src=".//plugins/jQuery3.7.1.js"></script>
 </body> 
 </html>
