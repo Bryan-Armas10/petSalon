@@ -22,29 +22,29 @@
         <div class="container-sm">
             <h1>Register a new pet</h1>
             <form id="registerForm">
-                <div class="form-group">
-                    <label for="txtName">Name:</label>
-                    <input type="text" id="txtName">
+                <div class="mb-3">
+                    <label class="form-label" for="txtName">Name:</label>
+                    <input class="form-control" type="text" id="txtName">
                     <small class="nameValidationMsg">This is a required field</small>
                 </div>
-                <div class="form-group">
-                    <label for="txtAge">Age:</label>
-                    <input type="number" id="txtAge">
+                <div class="mb-3">
+                    <label class="form-label" for="txtAge">Age:</label>
+                    <input class="form-control" type="number" id="txtAge">
                     <small class="ageValidationMsg">This is a required field</small>
                 </div>
 
-                <div class="form-group">
-                    <label for="txtGender">Gender:</label>
-                    <input type="text" id="txtGender">
+                <div class="mb-3">
+                    <label class="form-label" for="txtGender">Gender:</label>
+                    <input class="form-control" type="text" id="txtGender">
                     <small class="genderValidationMsg">This is a required field</small>
                 </div>
-                <div class="form-group">
-                    <label for="txtBreed">Breed:</label>
-                    <input type="text" id="txtBreed">
+                <div class="mb-3">
+                    <label class="form-label" for="txtBreed">Breed:</label>
+                    <input class="form-control" type="text" id="txtBreed">
                     <small class="breedValidationMsg">This is a required field</small>
                 </div>
-                <div class="form-group">
-                    <label for="txtService">Services:</label>
+                <div class="mb-3">
+                    <label class="form-label" for="txtService">Services:</label>
                     <select id="txtService">
                         <option value="" disabled selected>-- Select an option --</option>
                         <option value="grooming">Grooming</option>
@@ -53,7 +53,7 @@
                     </select>
                     <small class="serviceValidationMsg">This is a required field</small>
                 </div>
-                <div class="form-group">
+                <div class="mb-3">
                     <button id="btnRegister" type="button" onclick="register()">Register</button>
                 </div>
             </form>

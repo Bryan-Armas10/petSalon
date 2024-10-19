@@ -32,10 +32,13 @@ function isValid(service){
 }
 
 function clearForm() {
+    // Sets the value of the input field with the ID txtTitle to an empty string, effectively clearing it.
     $("#txtTitle").val('');
     $("#txtPrice").val('');
+    // Hides any element with the class titleValidationMsg, which likely contains error or warning messages related to the title.
     $(".titleValidationMsg").hide();
     $(".priceValidationMsg").hide();
+    //  Removes the error class from the txtTitle field, which may have highlighted the field as invalid.
     $("#txtTitle").removeClass("error");
     $("#txtPrice").removeClass("error");
 }

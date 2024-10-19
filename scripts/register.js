@@ -82,16 +82,19 @@ function isValid(pet){
 }
 
 function clearForm() {
+    // Sets the value of the input field with the ID txtName to an empty string, effectively clearing it.
     $("#txtName").val('');
     $("#txtAge").val('');
     $("#txtGender").val('');
     $("#txtBreed").val('');
     $("#txtService").val('');
+    // Hides any element with the class nameValidationMsg, which likely contains error or warning messages related to the title.
     $(".nameValidationMsg").hide();
     $(".ageValidationMsg").hide();
     $(".genderValidationMsg").hide();
     $(".breedValidationMsg").hide();
     $(".serviceValidationMsg").hide();
+    //  Removes the error class from the txtName field, which may have highlighted the field as invalid.
     $("#txtName").removeClass("error");
     $("#txtAge").removeClass("error");
     $("#txtGender").removeClass("error");
