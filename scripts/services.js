@@ -38,7 +38,7 @@ function clearForm() {
     // Hides any element with the class titleValidationMsg, which likely contains error or warning messages related to the title.
     $(".titleValidationMsg").hide();
     $(".priceValidationMsg").hide();
-    //  Removes the error class from the txtTitle field, which may have highlighted the field as invalid.
+    //  Removes the error class from the txtTitle field, whic   h may have highlighted the field as invalid.
     $("#txtTitle").removeClass("error");
     $("#txtPrice").removeClass("error");
 }
@@ -52,9 +52,10 @@ function register(){
 
     if(isValid(newService)){    
         console.log(newService);
+        save(newService);     
         //save(Service)
-        clearForm();
-    }else {
+        clearForm();    
+    }else{
         alert("Complete all the information.");
     }
 }
