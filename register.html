@@ -19,6 +19,9 @@
         </div>
     </header>
     <main>
+
+        <button id="mode">Dark Mode</button>
+
         <div class="container-sm">
             <h1>Register a new pet</h1>
             <form id="registerForm">
@@ -47,9 +50,7 @@
                     <label class="form-label" for="txtService">Services:</label>
                     <select id="txtService">
                         <option value="" disabled selected>-- Select an option --</option>
-                        <option value="grooming">Grooming</option>
-                        <option value="nails">Nails</option>
-                        <option value="vaccines">Vaccines</option>
+
                     </select>
                     <small class="serviceValidationMsg">This is a required field</small>
                 </div>
@@ -59,14 +60,14 @@
             </form>
         </div>
 
-        <div>
-            <h2>Registered pets</h2>
+        <div class="container-sm">
+            <h2 class="register-text">Registered pets</h2>
             <div class="container-sm">
-                <p>Total <span id="total">100</span></p>
+                <p class="total-text">Total <span id="total">100</span></p>
             </div>
             <!--
             <div id="pets">
-                 all the pets are going to be displayed here!!!
+                 all the pets are going to be displayed here!!!z        
             </div>
             
             id="pets" class="table table-bordered border-primary table-info"
@@ -89,6 +90,7 @@
 
         </div>
     </main>   
+    <script src="./scripts/storeManager.js"></script>
     <script src="./scripts/register.js"></script>
     <script src="./scripts/display.js"></script>
     <script src=".//plugins/jQuery3.7.1.js"></script>

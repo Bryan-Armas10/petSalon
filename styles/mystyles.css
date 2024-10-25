@@ -2,12 +2,13 @@ body{
     padding: 20px;
     margin:20px;
     font-family: arial;
-    background-color: #a7dbd8 !important;
+    /*background-color: #a7dbd8 !important;*/
 }
+/*
 main{
     background-color: #a7dbd8;
 }
-
+*/
 img{
     max-width: 100%;
 }
