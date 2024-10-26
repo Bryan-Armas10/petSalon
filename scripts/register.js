@@ -125,14 +125,16 @@ function deletePet(petId){
 }
 
 function getServices(){
-    let services = read(); // this fn is under the storemanager
-    let option ="";
+    let services = read(); //this fn is under the storeManager
+    let option="";
     for(let i=0;i<services.length;i++){
         let service = services[i];
         option+=`<option value="${service.title}">${service.title}</option>`
     }
     $("#txtService").append(option);
-}   
+}
+
+
 
 function init(){
     $(".nameValidationMsg").hide();
@@ -149,11 +151,10 @@ function init(){
         }
    });
 
-    console.log("init");
-    let pet1 = new Pet("Scooby",99,"Male","Dalma","Grooming");
+    let pet1 = new Pet("Scooby",99,"Male","Dalma","grooming");
     // create 2 more pets
-    let pet2 = new Pet("Snoopy",30,"Male","Husky","Vaccines");
-    let pet3 = new Pet("Tuti",50,"Female","Chihuahua","Nails");
+    let pet2 = new Pet("Snoopy",30,"Male","Husky","vaccines");
+    let pet3 = new Pet("Tuti",50,"Female","Chihuahua","nails");
 
     // push the pets on the array
     pets.push(pet1,pet2,pet3);
@@ -161,23 +162,25 @@ function init(){
     console.log(pets);
     displayTotals();
     displayTable();
+    getServices();  
+
 
     $("#total-text").hide();
 
-    $("#register-text").on('click',function(){  
+    $("#register-text").on('click',function(){
         $("#total-text").toggle();
     });
 
-    $("#mode").on('click',function(){
-        if($("body").css("background-color") === 'rgb(0, 0, 0)'){
-            $("body").css("background-color","white");
-            $(this).text("dark mode");
-        }else{
-            $("body").css("color","gray").css("background-color","black");
-            $(this).text("light mode");
-            console.log(" light bg");
-        }
-    });
+    // $("#mode").on('click',function(){
+    //     if($("body").css("background-color") === 'rgb(0, 0, 0)'){
+    //         $("body").css("background-color","white");
+    //         $(this).text("dark mode");
+    //     }else{
+    //         $("body").css("color","gray").css("background-color","black");
+    //         $(this).text("light mode");
+    //         console.log(" light bg");
+    //     }
+    // });
 }
 
 window.onload=init; // wait to render the html  

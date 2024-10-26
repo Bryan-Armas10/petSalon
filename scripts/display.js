@@ -16,15 +16,14 @@ function displayCards(){
 }
 
 function displayTotals(){
-    document.getElementById("total").innerHTML=pets.length;
+    document.getElementById("total").innerHTML=pets.length; 
 }       
 
 function displayTable(){
     let row ="";
     for(let i=0;i<pets.length;i++){
         let pet = pets[i];// Getting the current
-        row +=`<tr 
-        id="${i}">
+        row +=`<tr id="${i}">
         <td>${pet.name}</td>
         <td>${pet.age}</td>
         <td>${pet.gender}</td>      
@@ -39,5 +38,3 @@ function displayTable(){
     }
     document.getElementById("petTable").innerHTML=row;// insert the cart into HTML
 }
-
-// Create the deletePet function under the registe.js annd display on the console "Deleting pet ..." 
